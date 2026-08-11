@@ -296,13 +296,16 @@ a {
 /* TEMPORARY PROJECT BACKGROUNDS */
 
 .project-crosswalk::before {
-  background:
+  background-image:
     linear-gradient(
-      135deg,
-      #171717,
-      #384451 55%,
-      #151515
-    );
+      to top,
+      rgba(0, 0, 0, 0.18),
+      rgba(0, 0, 0, 0.02)
+    ),
+    url("../assets/projects/crosswalk/crosswalk-portfolio.png");
+
+  background-size: cover;
+  background-position: center;
 }
 
 .project-fondimex::before {
