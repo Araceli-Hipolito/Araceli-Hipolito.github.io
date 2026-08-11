@@ -310,14 +310,18 @@ a {
 }
 
 .project-fondimex::before {
-  background:
+  background-image:
     linear-gradient(
-      135deg,
-      #d5d5d5,
-      #8c8c8c 50%,
-      #40353a
-    );
-}
+      to bottom,
+      rgba(0, 0, 0, 0) 35%,
+      rgba(0, 0, 0, 0.12) 55%,
+      rgba(0, 0, 0, 0.82) 100%
+    ),
+    url("../assets/projects/fondimex/fondimex-cover.png");
+
+  background-size: cover;
+  background-position: center;
+}}
 
 .project-moneytree::before {
   background:
