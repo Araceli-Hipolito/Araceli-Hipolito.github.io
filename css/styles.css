@@ -298,9 +298,10 @@ a {
 .project-crosswalk::before {
   background-image:
     linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.18),
-      rgba(0, 0, 0, 0.02)
+      to bottom,
+      rgba(0, 0, 0, 0) 35%,
+      rgba(0, 0, 0, 0.12) 55%,
+      rgba(0, 0, 0, 0.82) 100%
     ),
     url("../assets/projects/crosswalk/crosswalk-portfolio.png");
 
