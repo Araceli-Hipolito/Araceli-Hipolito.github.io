@@ -201,3 +201,218 @@ a {
     font-size: 18px;
   }
 }
+/* SELECTED WORK */
+
+.work-section {
+  padding:
+    clamp(90px, 10vw, 160px)
+    var(--page-padding);
+  background: var(--white);
+  color: var(--black);
+}
+
+.section-heading {
+  margin-bottom: 48px;
+}
+
+.section-number {
+  margin-bottom: 10px;
+
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+
+  color: var(--cherry);
+}
+
+.section-heading h2 {
+  font-size: clamp(42px, 5vw, 72px);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+
+/* GRID */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+
+/* PROJECT */
+
+.project-card {
+  position: relative;
+
+  min-height: 520px;
+
+  display: block;
+  overflow: hidden;
+
+  background: #222;
+  color: var(--white);
+
+  isolation: isolate;
+}
+
+.project-card::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+
+  background-position: center;
+  background-size: cover;
+
+  transition:
+    transform 0.6s cubic-bezier(.2,.7,.2,1);
+}
+
+.project-card::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.78) 0%,
+      rgba(0, 0, 0, 0.35) 34%,
+      rgba(0, 0, 0, 0.05) 65%
+    );
+}
+
+.project-card:hover::before {
+  transform: scale(1.035);
+}
+
+
+/* TEMPORARY PROJECT BACKGROUNDS */
+
+.project-crosswalk::before {
+  background:
+    linear-gradient(
+      135deg,
+      #171717,
+      #384451 55%,
+      #151515
+    );
+}
+
+.project-fondimex::before {
+  background:
+    linear-gradient(
+      135deg,
+      #d5d5d5,
+      #8c8c8c 50%,
+      #40353a
+    );
+}
+
+.project-moneytree::before {
+  background:
+    linear-gradient(
+      135deg,
+      #263d38,
+      #687e76 55%,
+      #181818
+    );
+}
+
+.project-edtech::before {
+  background:
+    linear-gradient(
+      135deg,
+      #451025,
+      #8b1947 50%,
+      #31262b
+    );
+}
+
+
+/* PROJECT INFORMATION */
+
+.project-info {
+  position: absolute;
+
+  right: clamp(22px, 3vw, 40px);
+  bottom: clamp(22px, 3vw, 40px);
+
+  width: min(440px, 78%);
+
+  text-align: right;
+}
+
+.project-meta {
+  margin-bottom: 12px;
+
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.4;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.project-info h3 {
+  font-size: clamp(34px, 4vw, 58px);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.project-info > p:last-child {
+  margin-top: 14px;
+  margin-left: auto;
+
+  max-width: 360px;
+
+  font-size: 15px;
+  line-height: 1.45;
+
+  color: rgba(255, 255, 255, 0.72);
+}
+
+
+/* PROJECT GRID RESPONSIVE */
+
+@media (max-width: 900px) {
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    min-height: 480px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .work-section {
+    padding-top: 80px;
+  }
+
+  .section-heading {
+    margin-bottom: 32px;
+  }
+
+  .project-card {
+    min-height: 430px;
+  }
+
+  .project-info {
+    width: 84%;
+  }
+
+}
