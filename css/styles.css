@@ -432,3 +432,241 @@ a {
   }
 
 }
+/* ========================================
+   CASE STUDIES
+======================================== */
+
+.case-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px var(--page-padding);
+  background: var(--black);
+}
+
+.case-header a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.back-link {
+  font-size: 14px;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.back-link:hover {
+  opacity: 1;
+}
+
+.case-logo {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+
+/* HERO */
+
+.case-study {
+  background: var(--white);
+  color: var(--black);
+}
+
+.case-hero {
+  padding:
+    clamp(100px, 12vw, 180px)
+    var(--page-padding)
+    clamp(80px, 10vw, 140px);
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.case-meta {
+  margin-bottom: 24px;
+  color: var(--cherry);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.case-hero h1 {
+  max-width: 1100px;
+  font-size: clamp(72px, 10vw, 160px);
+  line-height: 0.9;
+  letter-spacing: -0.07em;
+  font-weight: 500;
+}
+
+.case-summary {
+  max-width: 850px;
+  margin-top: 56px;
+  font-size: clamp(24px, 2.5vw, 40px);
+  line-height: 1.3;
+  color: var(--gray);
+}
+
+
+/* PROJECT DETAILS */
+
+.case-details {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  padding: 48px var(--page-padding);
+  max-width: 1600px;
+  margin: 0 auto;
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+}
+
+.case-detail span {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--gray);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.case-detail p {
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+
+/* CONTENT SECTIONS */
+
+.case-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding:
+    clamp(100px, 12vw, 180px)
+    var(--page-padding);
+}
+
+.case-section .section-number {
+  margin-bottom: 28px;
+  color: var(--cherry);
+}
+
+.case-section h2 {
+  max-width: 900px;
+  font-size: clamp(48px, 6vw, 88px);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+  font-weight: 500;
+}
+
+.case-body {
+  max-width: 760px;
+  margin-top: 48px;
+  margin-left: auto;
+  font-size: clamp(20px, 2vw, 28px);
+  line-height: 1.5;
+  color: var(--gray);
+}
+
+
+/* FULL-WIDTH IMAGES */
+
+.case-image-full {
+  width: 100%;
+  padding: 0 var(--page-padding);
+}
+
+.case-image-full img {
+  display: block;
+  width: 100%;
+  max-width: 1600px;
+  height: auto;
+  margin: 0 auto;
+}
+
+
+/* PRODUCT AREAS */
+
+.case-columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 72px 80px;
+  margin-top: 80px;
+}
+
+.case-columns h3 {
+  margin-bottom: 16px;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.case-columns p {
+  max-width: 480px;
+  color: var(--gray);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+
+/* NEXT PROJECT */
+
+.next-project {
+  padding:
+    clamp(100px, 12vw, 180px)
+    var(--page-padding);
+  background: var(--black);
+  color: var(--white);
+}
+
+.next-project p {
+  margin-bottom: 24px;
+  color: var(--dusty-gray);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.next-project a {
+  display: inline-block;
+  color: var(--white);
+  text-decoration: none;
+  font-size: clamp(52px, 8vw, 120px);
+  line-height: 1;
+  letter-spacing: -0.06em;
+  transition: opacity 0.2s ease;
+}
+
+.next-project a:hover {
+  opacity: 0.65;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+
+  .case-header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .case-hero h1 {
+    font-size: clamp(64px, 20vw, 100px);
+  }
+
+  .case-details {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 24px;
+  }
+
+  .case-columns {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .case-body {
+    margin-left: 0;
+  }
+
+}
