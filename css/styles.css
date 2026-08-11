@@ -338,13 +338,17 @@ a {
 }
 
 .project-edtech::before {
-  background:
+  background-image:
     linear-gradient(
-      135deg,
-      #451025,
-      #8b1947 50%,
-      #31262b
-    );
+      to bottom,
+      rgba(0, 0, 0, 0) 35%,
+      rgba(0, 0, 0, 0.12) 55%,
+      rgba(0, 0, 0, 0.82) 100%
+    ),
+    url("../assets/projects/edtech/edtech-cover.png");
+
+  background-size: cover;
+  background-position: center;
 }
 
 
