@@ -324,13 +324,17 @@ a {
 }}
 
 .project-moneytree::before {
-  background:
+  background-image:
     linear-gradient(
-      135deg,
-      #263d38,
-      #687e76 55%,
-      #181818
-    );
+      to bottom,
+      rgba(0, 0, 0, 0) 35%,
+      rgba(0, 0, 0, 0.12) 55%,
+      rgba(0, 0, 0, 0.82) 100%
+    ),
+    url("../assets/projects/moneytree/moneytree-cover.png");
+
+  background-size: cover;
+  background-position: center;
 }
 
 .project-edtech::before {
