@@ -433,14 +433,21 @@ a {
 
 }
 /* ========================================
-   CASE STUDIES
+   CASE STUDIES — COMPACT V1
 ======================================== */
+
+
+/* CASE HEADER */
 
 .case-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 32px var(--page-padding);
+
+  padding:
+    24px
+    var(--page-padding);
+
   background: var(--black);
 }
 
@@ -452,6 +459,7 @@ a {
 .back-link {
   font-size: 14px;
   opacity: 0.7;
+
   transition: opacity 0.2s ease;
 }
 
@@ -466,26 +474,32 @@ a {
 }
 
 
-/* HERO */
+/* CASE STUDY BASE */
 
 .case-study {
   background: var(--white);
   color: var(--black);
 }
 
+
+/* HERO */
+
 .case-hero {
-  padding:
-    clamp(100px, 12vw, 180px)
-    var(--page-padding)
-    clamp(80px, 10vw, 140px);
-  max-width: 1600px;
+  max-width: 1360px;
   margin: 0 auto;
+
+  padding:
+    clamp(64px, 7vw, 100px)
+    var(--page-padding)
+    clamp(44px, 5vw, 68px);
 }
 
 .case-meta {
-  margin-bottom: 24px;
+  margin-bottom: 18px;
+
   color: var(--cherry);
-  font-size: 14px;
+
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -493,46 +507,63 @@ a {
 
 .case-hero h1 {
   max-width: 1100px;
-  font-size: clamp(72px, 10vw, 160px);
+
+  font-size: clamp(64px, 8vw, 126px);
+  font-weight: 500;
   line-height: 0.9;
   letter-spacing: -0.07em;
-  font-weight: 500;
+}
+
+.case-title-accent {
+  color: var(--cherry);
 }
 
 .case-summary {
-  max-width: 850px;
-  margin-top: 56px;
-  font-size: clamp(24px, 2.5vw, 40px);
-  line-height: 1.3;
+  max-width: 820px;
+
+  margin-top: 28px;
+
+  font-size: clamp(20px, 2vw, 30px);
+  line-height: 1.35;
+
   color: var(--gray);
 }
 
 
-/* PROJECT DETAILS */
+/* PROJECT SNAPSHOT */
 
 .case-details {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
-  padding: 48px var(--page-padding);
-  max-width: 1600px;
+
+  gap: 24px;
+
+  max-width: 1360px;
   margin: 0 auto;
+
+  padding:
+    28px
+    var(--page-padding);
+
   border-top: 1px solid #dedede;
   border-bottom: 1px solid #dedede;
 }
 
 .case-detail span {
   display: block;
-  margin-bottom: 10px;
+
+  margin-bottom: 8px;
+
   color: var(--gray);
-  font-size: 12px;
+
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .case-detail p {
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.4;
 }
 
@@ -540,100 +571,237 @@ a {
 /* CONTENT SECTIONS */
 
 .case-section {
-  max-width: 1200px;
+  max-width: 1120px;
   margin: 0 auto;
+
   padding:
-    clamp(100px, 12vw, 180px)
+    clamp(44px, 4.5vw, 68px)
     var(--page-padding);
 }
 
 .case-section .section-number {
-  margin-bottom: 28px;
+  margin-bottom: 16px;
+
   color: var(--cherry);
 }
 
 .case-section h2 {
-  max-width: 900px;
-  font-size: clamp(48px, 6vw, 88px);
-  line-height: 0.95;
-  letter-spacing: -0.05em;
+  max-width: 820px;
+
+  font-size: clamp(40px, 4.8vw, 66px);
   font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: -0.05em;
 }
 
 .case-body {
   max-width: 760px;
-  margin-top: 48px;
+
+  margin-top: 20px;
   margin-left: auto;
-  font-size: clamp(20px, 2vw, 28px);
-  line-height: 1.5;
+
   color: var(--gray);
+
+  font-size: clamp(18px, 1.5vw, 22px);
+  line-height: 1.5;
+}
+
+.case-body + .case-body {
+  margin-top: 14px;
+}
+
+.case-body-compact {
+  max-width: 820px;
+}
+
+.case-note {
+  max-width: 760px;
+
+  margin-top: 16px;
+  margin-left: auto;
+
+  color: var(--gray);
+
+  font-size: 14px;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.case-note-left {
+  margin-left: auto;
 }
 
 
-/* FULL-WIDTH IMAGES */
+/* ========================================
+   CONCEPT → MVP PROCESS
+======================================== */
 
-.case-image-full {
-  width: 100%;
-  padding: 0 var(--page-padding);
+.process-flow {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+
+  gap: 10px;
+
+  margin-top: 32px;
 }
 
-.case-image-full img {
+.process-item {
+  min-height: 132px;
+
+  padding: 16px;
+
+  border-top: 2px solid var(--cherry);
+
+  background: #f7f7f7;
+}
+
+.process-item span {
   display: block;
-  width: 100%;
-  max-width: 1600px;
-  height: auto;
-  margin: 0 auto;
+
+  margin-bottom: 18px;
+
+  color: var(--cherry);
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.process-item h3 {
+  margin-bottom: 6px;
+
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+.process-item p {
+  color: var(--gray);
+
+  font-size: 13px;
+  line-height: 1.4;
 }
 
 
-/* PRODUCT AREAS */
+/* ========================================
+   PRODUCT AREAS / LEARNINGS
+======================================== */
 
 .case-columns {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 72px 80px;
-  margin-top: 80px;
+
+  gap: 30px 52px;
+
+  margin-top: 34px;
+}
+
+.case-columns > div {
+  padding-top: 16px;
+
+  border-top: 1px solid #d8d8d8;
 }
 
 .case-columns h3 {
-  margin-bottom: 16px;
-  font-size: 28px;
+  margin-bottom: 9px;
+
+  font-size: 23px;
   font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
 }
 
 .case-columns p {
-  max-width: 480px;
+  max-width: 470px;
+
   color: var(--gray);
-  font-size: 18px;
-  line-height: 1.6;
+
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 
-/* NEXT PROJECT */
+/* ========================================
+   PRODUCT SCREENS
+======================================== */
+
+.case-media-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+
+  gap: 14px;
+
+  width: min(100% - (var(--page-padding) * 2), 1050px);
+
+  margin:
+    4px
+    auto
+    38px;
+}
+
+.case-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+
+  overflow: hidden;
+
+  background: #f5f5f5;
+}
+
+.case-media img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  max-height: 440px;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.case-media-featured img {
+  object-fit: contain;
+}
+
+
+/* ========================================
+   NEXT PROJECT
+======================================== */
 
 .next-project {
   padding:
-    clamp(100px, 12vw, 180px)
+    clamp(64px, 7vw, 96px)
     var(--page-padding);
+
   background: var(--black);
   color: var(--white);
 }
 
 .next-project p {
-  margin-bottom: 24px;
+  margin-bottom: 14px;
+
   color: var(--dusty-gray);
-  font-size: 14px;
-  text-transform: uppercase;
+
+  font-size: 12px;
   letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .next-project a {
   display: inline-block;
+
   color: var(--white);
-  text-decoration: none;
-  font-size: clamp(52px, 8vw, 120px);
+
+  font-size: clamp(48px, 7vw, 96px);
   line-height: 1;
   letter-spacing: -0.06em;
+  text-decoration: none;
+
   transition: opacity 0.2s ease;
 }
 
@@ -642,31 +810,201 @@ a {
 }
 
 
-/* RESPONSIVE */
+/* ========================================
+   TABLET
+======================================== */
 
-@media (max-width: 800px) {
-
-  .case-header {
-    padding-top: 24px;
-    padding-bottom: 24px;
-  }
-
-  .case-hero h1 {
-    font-size: clamp(64px, 20vw, 100px);
-  }
+@media (max-width: 950px) {
 
   .case-details {
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px 24px;
+
+    gap: 24px 20px;
   }
 
-  .case-columns {
-    grid-template-columns: 1fr;
-    gap: 48px;
+  .process-flow {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .case-media-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 650px) {
+
+  .case-header {
+    padding:
+      18px
+      var(--page-padding);
+  }
+
+  .case-logo {
+    display: none;
+  }
+
+  .case-hero {
+    padding:
+      48px
+      var(--page-padding)
+      36px;
+  }
+
+  .case-meta {
+    margin-bottom: 14px;
+  }
+
+  .case-hero h1 {
+    font-size: clamp(54px, 18vw, 82px);
+  }
+
+  .case-summary {
+    margin-top: 20px;
+
+    font-size: 19px;
+    line-height: 1.4;
+  }
+
+
+  /* SNAPSHOT */
+
+  .case-details {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px 16px;
+
+    padding:
+      24px
+      var(--page-padding);
+  }
+
+  .case-detail p {
+    font-size: 14px;
+  }
+
+
+  /* CONTENT */
+
+  .case-section {
+    padding:
+      38px
+      var(--page-padding);
+  }
+
+  .case-section .section-number {
+    margin-bottom: 12px;
+  }
+
+  .case-section h2 {
+    font-size: clamp(36px, 11vw, 50px);
   }
 
   .case-body {
     margin-left: 0;
+    margin-top: 16px;
+
+    font-size: 17px;
+    line-height: 1.5;
+  }
+
+  .case-body + .case-body {
+    margin-top: 12px;
+  }
+
+  .case-note,
+  .case-note-left {
+    margin-left: 0;
+
+    font-size: 13px;
+  }
+
+
+  /* PROCESS */
+
+  .process-flow {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 8px;
+
+    margin-top: 26px;
+  }
+
+  .process-item {
+    min-height: 118px;
+
+    padding: 13px;
+  }
+
+  .process-item span {
+    margin-bottom: 12px;
+  }
+
+  .process-item h3 {
+    font-size: 16px;
+  }
+
+  .process-item p {
+    font-size: 12px;
+  }
+
+
+  /* PRODUCT AREAS */
+
+  .case-columns {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+
+    margin-top: 26px;
+  }
+
+  .case-columns > div {
+    padding-top: 13px;
+  }
+
+  .case-columns h3 {
+    font-size: 21px;
+  }
+
+  .case-columns p {
+    font-size: 15px;
+  }
+
+
+  /* IMAGES */
+
+  .case-media-grid {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+
+    width: calc(100% - (var(--page-padding) * 2));
+
+    margin-bottom: 30px;
+  }
+
+  .case-media img {
+    width: 100%;
+    height: auto;
+
+    max-height: none;
+
+    object-fit: contain;
+  }
+
+
+  /* NEXT PROJECT */
+
+  .next-project {
+    padding:
+      54px
+      var(--page-padding);
   }
 
 }
