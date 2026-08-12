@@ -1008,3 +1008,33 @@ a {
   }
 
 }
+/* ========================================
+   CASE STUDY — IMAGE INTERACTIONS
+======================================== */
+
+.case-media {
+  cursor: zoom-in;
+
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease;
+}
+
+@media (hover: hover) {
+
+  .case-media:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+      0 14px 32px rgba(0, 0, 0, 0.10);
+  }
+
+  .case-media img {
+    transition: transform 0.35s ease;
+  }
+
+  .case-media:hover img {
+    transform: scale(1.012);
+  }
+
+}
