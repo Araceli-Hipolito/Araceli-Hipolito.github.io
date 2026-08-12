@@ -1020,6 +1020,15 @@ a {
     box-shadow 0.28s ease;
 }
 
+.case-media img {
+  height: auto;
+  max-height: 420px;
+
+  object-fit: contain;
+
+  transition: transform 0.35s ease;
+}
+
 @media (hover: hover) {
 
   .case-media:hover {
@@ -1027,10 +1036,6 @@ a {
 
     box-shadow:
       0 14px 32px rgba(0, 0, 0, 0.10);
-  }
-
-  .case-media img {
-    transition: transform 0.35s ease;
   }
 
   .case-media:hover img {
