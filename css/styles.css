@@ -1560,3 +1560,26 @@ body.lightbox-open {
   max-height: none;
   object-fit: contain;
 }
+/* ========================================
+   CASE STUDY — MOBILE SCREEN
+======================================== */
+
+.case-media-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: clamp(32px, 5vw, 72px);
+
+  background: #f5f5f5;
+}
+
+.case-media-mobile img {
+  width: auto;
+  height: auto;
+
+  max-width: min(100%, 420px);
+  max-height: 760px;
+
+  object-fit: contain;
+}
