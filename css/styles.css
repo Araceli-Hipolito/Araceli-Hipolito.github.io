@@ -252,19 +252,23 @@ a {
    PROJECT CARD
 ======================================== */
 
-.project-card {
-  position: relative;
+.project-card::after {
+  content: "";
 
-  width: 100%;
-  aspect-ratio: 8 / 5;
+  position: absolute;
+  inset: 0;
 
-  display: block;
-  overflow: hidden;
+  z-index: -1;
 
-  background: #111111;
-  color: var(--white);
-
-  isolation: isolate;
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.92) 0%,
+      rgba(0, 0, 0, 0.72) 24%,
+      rgba(0, 0, 0, 0.38) 48%,
+      rgba(0, 0, 0, 0.08) 68%,
+      rgba(0, 0, 0, 0) 82%
+    );
 }
 
 
@@ -366,7 +370,7 @@ a {
   position: absolute;
 
   right: clamp(24px, 3vw, 40px);
-  bottom: clamp(24px, 3vw, 36px);
+  bottom: clamp(20px, 2.5vw, 32px);
 
   width: min(500px, 82%);
 
