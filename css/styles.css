@@ -649,6 +649,41 @@ a {
   letter-spacing: -0.02em;
 }
 
+.case-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.case-header-cta {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 9px 15px;
+  border-radius: 999px;
+
+  background: var(--cherry);
+  color: var(--white);
+
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.case-header-cta:hover {
+  background: var(--soft-cherry);
+  transform: translateY(-2px);
+}
+
+.case-header-cta:focus-visible {
+  outline: 2px solid var(--white);
+  outline-offset: 3px;
+}
+
 
 /* CASE STUDY BASE */
 
@@ -987,6 +1022,79 @@ a {
 
 
 /* ========================================
+   CASE STUDY — CONTACT FOOTER
+======================================== */
+
+.case-contact-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 32px;
+
+  padding:
+    32px
+    var(--page-padding);
+
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+
+  background: var(--black);
+  color: var(--white);
+}
+
+.case-contact-copy p {
+  color: var(--dusty-gray);
+
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.case-contact-copy {
+  display: flex;
+  align-items: center;
+
+  gap: 22px;
+}
+
+.case-contact-cta {
+  display: inline-block;
+
+  color: var(--cherry);
+
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+
+  transition: color 0.2s ease;
+}
+
+.case-contact-cta:hover {
+  color: var(--white);
+}
+
+.case-contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  gap: 12px 22px;
+}
+
+.case-contact-links a {
+  color: var(--cherry);
+
+  font-size: 14px;
+
+  transition: color 0.2s ease;
+}
+
+.case-contact-links a:hover {
+  color: var(--white);
+}
+
+
+/* ========================================
    TABLET
 ======================================== */
 
@@ -1023,6 +1131,16 @@ a {
 
   .case-logo {
     display: none;
+  }
+
+  .case-header-actions {
+    gap: 0;
+  }
+
+  .case-header-cta {
+    padding: 8px 13px;
+
+    font-size: 12px;
   }
 
   .case-hero {
@@ -1181,6 +1299,32 @@ a {
     padding:
       54px
       var(--page-padding);
+  }
+
+
+  /* CONTACT FOOTER */
+
+  .case-contact-footer {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 24px;
+
+    padding:
+      32px
+      var(--page-padding);
+  }
+
+  .case-contact-copy {
+    flex-wrap: wrap;
+
+    gap: 10px 18px;
+  }
+
+  .case-contact-links {
+    justify-content: flex-start;
+
+    gap: 14px 20px;
   }
 
 }
