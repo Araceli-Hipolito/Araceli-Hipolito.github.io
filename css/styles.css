@@ -77,6 +77,33 @@ a {
   color: var(--white);
 }
 
+.nav .nav-cta {
+  padding: 10px 16px;
+
+  border-radius: 999px;
+
+  background: var(--cherry);
+  color: var(--white);
+
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.nav .nav-cta:hover {
+  background: var(--soft-cherry);
+  color: var(--white);
+
+  transform: translateY(-2px);
+}
+
+.nav .nav-cta:focus-visible {
+  outline: 2px solid var(--white);
+  outline-offset: 3px;
+}
+
 /* HERO */
 
 .hero {
@@ -185,6 +212,10 @@ a {
 
   .nav a:nth-child(2) {
     display: none;
+  }
+
+  .nav .nav-cta {
+    padding: 9px 12px;
   }
 
   .hero {
