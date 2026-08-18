@@ -1903,3 +1903,26 @@ body.lightbox-open {
 
   object-fit: contain;
 }
+/* CASE STUDY — FINAL CONTACT FIX */
+
+.case-contact-cta,
+.case-contact-links a {
+  color: #ffffff;
+}
+
+.case-contact-links {
+  align-items: center;
+}
+
+.case-contact-links a {
+  display: inline-flex;
+  align-items: center;
+
+  min-height: 24px;
+  line-height: 1.2;
+}
+
+.case-contact-cta:hover,
+.case-contact-links a:hover {
+  color: var(--soft-cherry);
+}
